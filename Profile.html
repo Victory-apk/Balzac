@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль</title>
+    <link rel="stylesheet" href="Styles3.css">
+    <link rel="stylesheet" href="ProfileStyles.css">
+</head>
+<body>
+    <header>Личный кабинет
+        <button id="cartButton" class="cart-btn">🛒</button>
+    </header>
+
+    <div class="profile-container">
+        <div class="profile-info">
+            <h2 id="username"></h2>
+            <h3>Ваши данные</h3>
+            <form id="profileForm">
+                <div class="form-row">
+                    <input type="text" id="fullName" placeholder="ФИО">
+                    <input type="email" id="email" placeholder="Email">
+                </div>
+                <div class="form-row">
+                    <input type="text" id="phone" placeholder="Телефон">
+                    <input type="date" id="birthdate">
+                </div>
+                <button type="submit">Сохранить</button>
+            </form>
+        </div>
+
+        <div class="profile-right">
+            <h3>Таймер доставки</h3>
+            <input type="datetime-local" id="manualTime">
+            <button id="startTimer">Запустить таймер</button>
+            <p id="countdown">Ожидание...</p>
+            <div id="calendar"></div>
+        </div>
+    </div>
+
+    <button id="logout">Выйти</button>
+
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Форма доставки</h2>
+
+            <div class="autocomplete">
+                <input type="text" id="city" placeholder="Город">
+                <ul id="cityList" class="suggestions"></ul>
+            </div>
+
+            <div class="autocomplete">
+                <input type="text" id="street" placeholder="Улица">
+                <ul id="streetList" class="suggestions"></ul>
+            </div>
+
+            <input type="text" id="house" placeholder="Дом">
+            <input type="text" id="apartment" placeholder="Квартира">
+            <input type="text" id="floor" placeholder="Этаж">
+            <textarea id="comment" placeholder="Комментарий к заказу"></textarea>
+            <label>Выберите дату и время доставки:</label>
+            <input type="datetime-local" id="deliveryTime">
+            <button id="orderButton">Оформить заказ</button>
+        </div>
+    </div>
+
+    <script src="ScriptProfile.js"></script>
+    <script src="AutoComplete.js"></script>
+    <script src="Calendar.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+/* Общие стили */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Контейнер с карточками */
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Оформление карточек */
+.dish {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Карточка для добавления */
+.dish.add-dish {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    min-height: 200px;
+}
+
+.dish.add-dish .plus {
+    font-size: 50px;
+    color: #ccc;
+}
+
+/* Изображение в карточке */
+.dish img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Анимация при наведении */
+.dish:hover {
+    transform: scale(1.05);
+}
+
+/* Кнопка возврата на главную */
+.btn {
+    display: inline-block;
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: silver;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background-color: DeepPink;
+}
+
+/* Пагинация */
+.pagination-controls {
+    margin: 20px auto;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.pagination {
+    display: flex;
+    gap: 5px;
+}
+
+.pagination button {
+    padding: 5px 10px;
+    border: none;
+    background: #eee;
+    cursor: pointer;
+}
+
+.pagination button.active {
+    background: silver;
+    color: white;
+}
+
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-content input, .modal-content textarea {
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+}
+
+.modal-content button {
+    background: silver;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Кнопка удаления */
+.delete-btn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}}

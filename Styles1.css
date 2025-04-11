@@ -1,0 +1,11 @@
+header {
+    position: relative;
+    background: url('Меню.jpg') no-repeat center/cover;
+    color: white;
+    padding: 100px 50px;
+    font-family: 'Playfair Display', serif;
+    transition: transform 0.3s ease-in-out;
+
+    /* Обрезаем нижнюю границу */
+    clip-path: ellipse(100% 80% at center top);
+}

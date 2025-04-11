@@ -1,0 +1,115 @@
+body {
+    font-family: 'Bodoni Moda', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+header {
+    background: url('Первая.jpg') no-repeat center/cover;
+    color: white;
+    padding: 100px 20px;
+    font-size: 100px;
+    text-transform: uppercase;
+    transition: transform 0.7s ease-in-out;
+}
+
+header:hover {
+    transform: scale(1.05);
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.auth-container {
+    max-width: 350px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.auth-container input, .auth-container button {
+    width: 100%;
+    padding: 12px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.auth-container button {
+    background: #ff4500;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 18px;
+    border: none;
+}
+
+.auth-container button:hover {
+    background: #ff6347;
+}
+
+.nav-buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    padding: 20px;
+    font-size: 20px;
+    background: #ff4500;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.btn:hover {
+    background: #ff6347;
+    transform: scale(1.05);
+}
+
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    background: #333;
+    color: white;
+    font-size: 16px;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    header {
+        font-size: 60px;
+        padding: 60px 20px;
+    }
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-buttons {
+        max-width: 100%;
+        grid-template-columns: 1fr;
+    }
+    .btn {
+        font-size: 18px;
+        padding: 15px;
+    }
+}

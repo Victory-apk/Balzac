@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меню | BALZAC</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>МЕНЮ</h1>
+        <link rel="stylesheet" href="styles1.css">
+    </header>
+    
+    <div class="pagination-controls">
+        <select id="items-per-page">
+            <option value="50">50 элементов</option>
+            <option value="100" selected>100 элементов</option>
+            <option value="200">200 элементов</option>
+        </select>
+        <div class="pagination"></div>
+    </div>
+    
+    <section class="menu-container" id="menu-container">
+        <!-- Карточки будут добавляться динамически -->
+    </section>
+    
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Добавить новое блюдо</h2>
+            <input type="file" id="dish-image" accept="image/*">
+            <input type="text" id="dish-name" placeholder="Название блюда">
+            <textarea id="dish-description" placeholder="Описание блюда"></textarea>
+            <button id="save-dish">Сохранить</button>
+        </div>
+    </div>
+    
+    <a href="Main.html" class="btn">На главную</a>
+    <script src="Script.js"></script>
+</body>
+</html>
